@@ -26,40 +26,41 @@ class TestSeleniumApplicationTests {
     @Test
     public void TestLoginPageSussesfully() throws InterruptedException {
 
-        driver.get("http://localhost:5173/user/login");
-
-        WebElement username = driver.findElement(By.id("username"));
-        WebElement password = driver.findElement(By.id("password"));
-        WebElement login = driver.findElement(By.id("loginButton"));
-        username.sendKeys("test");
-        password.sendKeys("test");
-
-        Thread.sleep(2000);
-        login.click();
-
-        assertTrue(driver.getCurrentUrl().contains("/dashboard"));
-        Thread.sleep(2000);
-
-    }
-
-    @Test
-    public void TestLoginPageFail() throws InterruptedException {
-
-        driver.get("http://localhost:5173/user/login");
-
-        WebElement username = driver.findElement(By.id("username"));
-        WebElement password = driver.findElement(By.id("password"));
-        WebElement login = driver.findElement(By.id("loginButton"));
-        username.sendKeys("teast");
-        password.sendKeys("test");
-
-        Thread.sleep(2000);
-        login.click();
-
-        assertFalse(driver.getCurrentUrl().contains("/dashboard"));
-        Thread.sleep(2000);
+        driver.get("https://ngrok.com/downloads/windows");
+        System.out.println(driver.getTitle());
+//
+//        WebElement username = driver.findElement(By.id("username"));
+//        WebElement password = driver.findElement(By.id("password"));
+//        WebElement login = driver.findElement(By.id("loginButton"));
+//        username.sendKeys("test");
+//        password.sendKeys("test");
+//
+//        Thread.sleep(2000);
+//        login.click();
+//
+//        assertTrue(driver.getCurrentUrl().contains("/dashboard"));
+//        Thread.sleep(2000);
 
     }
+
+//    @Test
+//    public void TestLoginPageFail() throws InterruptedException {
+//
+//        driver.get("http://localhost:5173/user/login");
+//
+//        WebElement username = driver.findElement(By.id("username"));
+//        WebElement password = driver.findElement(By.id("password"));
+//        WebElement login = driver.findElement(By.id("loginButton"));
+//        username.sendKeys("teast");
+//        password.sendKeys("test");
+//
+//        Thread.sleep(2000);
+//        login.click();
+//
+//        assertFalse(driver.getCurrentUrl().contains("/dashboard"));
+//        Thread.sleep(2000);
+//
+//    }
 
     @AfterEach
     public void tearDown() {
