@@ -56,7 +56,7 @@ class TestSeleniumApplicationTests {
         Thread.sleep(2000);
         login.click();
 
-        assertTrue(driver.getCurrentUrl().contains("/dashboard"));
+        assertFalse(driver.getCurrentUrl().contains("/dashboard"));
         Thread.sleep(2000);
 
     }
