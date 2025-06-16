@@ -23,25 +23,25 @@ class TestSeleniumApplicationTests {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lenovo\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64/chromedriver.exe");
         driver = new ChromeDriver();
     }
-//    @Test
-//    public void TestLoginPageSussesfully() throws InterruptedException {
-//
-//        driver.get("https://ngrok.com/downloads/windows");
-//        System.out.println(driver.getTitle());
-//
-//        WebElement username = driver.findElement(By.id("username"));
-//        WebElement password = driver.findElement(By.id("password"));
-//        WebElement login = driver.findElement(By.id("loginButton"));
-//        username.sendKeys("test");
-//        password.sendKeys("test");
-//
-//        Thread.sleep(2000);
-//        login.click();
-//
-//        assertTrue(driver.getCurrentUrl().contains("/dashboard"));
-//        Thread.sleep(2000);
+    @Test
+    public void TestLoginPageSussesfully() throws InterruptedException {
 
-   // }
+        driver.get("http://localhost:5173/user/login");
+        System.out.println(driver.getTitle());
+
+        WebElement username = driver.findElement(By.id("username"));
+        WebElement password = driver.findElement(By.id("password"));
+        WebElement login = driver.findElement(By.id("loginButton"));
+        username.sendKeys("test");
+        password.sendKeys("test");
+
+        Thread.sleep(2000);
+        login.click();
+
+        assertTrue(driver.getCurrentUrl().contains("/dashboard"));
+        Thread.sleep(2000);
+
+    }
 
     @Test
     public void TestLoginPageFail() throws InterruptedException {
