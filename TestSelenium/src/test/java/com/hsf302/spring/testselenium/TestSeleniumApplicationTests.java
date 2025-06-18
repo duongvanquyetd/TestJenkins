@@ -27,7 +27,7 @@ class TestSeleniumApplicationTests {
     public void TestLoginPageSussesfully() throws InterruptedException {
 
         driver.get("http://localhost:5173/user/login");
-        System.out.println(driver.getTitle());
+
 
         WebElement username = driver.findElement(By.id("username"));
         WebElement password = driver.findElement(By.id("password"));
@@ -57,7 +57,7 @@ class TestSeleniumApplicationTests {
         Thread.sleep(2000);
         login.click();
 
-        assertFalse(driver.getCurrentUrl().contains("/dashboard"));
+        assertTrue(driver.getCurrentUrl().contains("/dashboard"));
         Thread.sleep(2000);
 
     }
