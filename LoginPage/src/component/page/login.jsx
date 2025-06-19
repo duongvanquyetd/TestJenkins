@@ -11,7 +11,7 @@ function login()
   {
     navigator('/dashboard')
   }
-}///
+}/////
 ///
   return (
     <div >
