@@ -12,7 +12,7 @@ function login()
     navigator('/dashboard')
   }
 }///
-/////////test//aaa
+///
   return (
     <div >
     UserName  <input type="text" id="username" onChange={(e)=> setUsername(e.target.value)}/><br></br>
